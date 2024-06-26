@@ -6,13 +6,12 @@ channels:
   - conda-forge
 
 dependencies:
-  - python=3.8.2                # https://pyreadiness.org/3.10
-  - robocorp-truststore=0.8.0     # https://pypi.org/project/robocorp-truststore/
+  - python=3.10.12                # https://pyreadiness.org/3.10
   - pip=23.2.1                    # https://pip.pypa.io/en/stable/news
+  - robocorp-truststore=0.8.0     # https://pypi.org/project/robocorp-truststore/
   - pip:
     - rpaframework==28.0.0        # https://rpaframework.org/releasenotes.html
     - robocorp==1.4.0             # https://pypi.org/project/robocorp
     - robocorp-browser==2.2.1     # https://pypi.org/project/robocorp-browser
-    - requests==2.31.0            # https://pypi.org/project/requests
     - openpyxl==3.1.2
     - dateparser==1.1.2
