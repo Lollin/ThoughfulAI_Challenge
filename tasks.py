@@ -2,6 +2,7 @@ from RPA.Browser.Selenium import Selenium
 from robocorp.tasks import task
 from RPA.Excel.Files import Files
 from RPA.HTTP import HTTP
+from robocorp import workitems
 import json
 from datetime import datetime, timedelta
 import dateparser
@@ -20,15 +21,14 @@ excel = Files()
 http = HTTP()
 
 
-# Load configuration
-with open("config.json") as config_file:
-    config = json.load(config_file)
+# Load configurations
 
-search_phrase = config["search_phrase"]
-news_category = config["news_category"]
-if config["months"] == 0:
-    config["months"] = 1
-months = config["months"]
+search_phrase = workitems["search_phrase"]
+news_category = workitems["news_category"]
+if workitems["months"] == 0:
+    months = 1
+else:
+    months = workitems["months"]
 
 # Define the date range for the news articles
 end_date = datetime.now()
