@@ -68,7 +68,7 @@ def main():
     """
 
     print("Opening browser")
-    browser.open_browser("https://www.latimes.com/", browser="firefox")
+    browser.open_browser("https://www.latimes.com/", browser="headlessfirefox")
     browser.maximize_browser_window()
     browser.wait_until_element_is_visible(
         '//span[contains(text(), "Show Search")]', timeout=10
